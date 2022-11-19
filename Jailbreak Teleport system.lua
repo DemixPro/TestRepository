@@ -297,7 +297,7 @@ local function teleport(cframe, tried) -- unoptimized
 
     local tried = tried or { };
     local nearest_vehicle = utilities:get_nearest_vehicle(tried);
-	writefile("T.txt",nearest_vehicle)
+    writefile("T.txt",nearest_vehicle)
     local tvehicle_object = nearest_vehicle and nearest_vehicle.ValidRoot;
 
     dependencies.variables.teleporting = true;
