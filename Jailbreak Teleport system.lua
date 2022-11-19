@@ -297,7 +297,11 @@ local function teleport(cframe, tried) -- unoptimized
 
     local tried = tried or { };
     local nearest_vehicle = utilities:get_nearest_vehicle(tried);
-    writefile("T.txt",nearest_vehicle)
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "whatever";
+    Text = nearest_vehicle;
+    Duration = "5";
+            )}
     local tvehicle_object = nearest_vehicle and nearest_vehicle.ValidRoot;
 
     dependencies.variables.teleporting = true;
